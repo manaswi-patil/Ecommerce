@@ -8,7 +8,7 @@ import image6 from './../../../src/assets/image 6.png';
 import image7 from './../../../src/assets/image 7.png';
 import image8 from './../../../src/assets/image 8.png';
 
-const Belowhomebox2 = () => {
+const Box2 = () => {
     const handlePopup = (image) => {
         console.log(image);
     };
@@ -107,4 +107,4 @@ const Belowhomebox2 = () => {
     );
 };
 
-export default Belowhomebox2;
+export default Box2;

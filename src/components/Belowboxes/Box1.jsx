@@ -3,8 +3,8 @@ import React from 'react';
 import homebox1img1 from './../../assets/homebox1img1.png';
 import homebox1img2 from './../../assets/homebox1img2.png';
 import homebox1img3 from './../../assets/homebox1img3.png';
-import Belowhomebox2 from './../Belowboxes/Belowhomebox2';
-const Belowhomebox1 = () => {
+import Box2 from './../Belowboxes/Box2';
+const Box1 = () => {
   const [isCardOpen, setIsCardOpen] = React.useState(false);
 
   const handleCardClick = () => {
@@ -46,12 +46,12 @@ const Belowhomebox1 = () => {
           </div>
         </div>
       </div>
-      <Belowhomebox2 />
+      <Box2 />
     </div>
 
   );
 };
 
-export default Belowhomebox1;
+export default Box1;
 
 // mt-[100vh] 
