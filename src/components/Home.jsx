@@ -1,6 +1,10 @@
 import React from 'react'
 import firstimg from './../../src/assets/firstimg.png';
-
+import Box1 from './Belowboxes/Box1';
+import Box2 from './Belowboxes/Box2';
+import Box3 from './Belowboxes/Box3';
+import Box4 from './Belowboxes/Box4';
+import Footer from './Belowboxes/Footer';
 const Home = () => {
     return (
         <div>
@@ -16,7 +20,12 @@ const Home = () => {
 
                 </div>
             </div>
+            <Box1 />
+            <Box2 />
 
+            <Box3 />
+            <Box4 />
+            <Footer />
         </div>
 
     )

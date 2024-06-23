@@ -17,9 +17,8 @@ import image13 from './../../../src/assets/image 1.png';
 import image14 from './../../../src/assets/image 2.png';
 import image15 from './../../../src/assets/image 3.png';
 import image16 from './../../../src/assets/image 4.png';
-import Cartpage from './cartpage';
-import ShareDetails from './../../components/Belowboxes/ShareDetails';
-import CartDetails from './../../components/Belowboxes/CartDetails';
+import CartPage from './cartpage';
+
 
 const Box6 = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -30,33 +29,13 @@ const Box6 = () => {
         setCurrentPage(pageNumber);
     };
 
+ 
+    // Replace the existing handleAddToCart function with this one
+    const handleAddToCart = () => {
+        const cartPageUrl = './components/Belowboxes/cartpage'; // Adjust this URL to match your routing configuration
+        window.open(cartPageUrl, '_blank');
+    };
 
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const [hoveredProduct, setHoveredProduct] = useState(null);
-    // const [showCartDetails, setShowCartDetails] = useState(false);
-    // const [showShareDetails, setShowShareDetails] = useState(false);
-    // const [selectedProduct, setSelectedProduct] = useState(null);
-    // const totalPages = 3;
-
-    // const handlePageChange = (pageNumber) => {
-    //     setCurrentPage(pageNumber);
-    // };
-
-    // const handleAddToCart = (product) => {
-    //     setSelectedProduct(product);
-    //     setShowCartDetails(true);
-    // };
-
-    // const handleShare = (product) => {
-    //     setSelectedProduct(product);
-    //     setShowShareDetails(true);
-    // };
-
-    // const closeDetails = () => {
-    //     setShowCartDetails(false);
-    //     setShowShareDetails(false);
-    //     setSelectedProduct(null);
-    // };
     const allProducts = [
         { image: image1, name: "Syltherine", description: "Stylish cafe chair", price: "Rp 2.500.000" },
         { image: image2, name: "Asgaard sofa", description: "Stylish sofa", price: "Rp 2.5000.000" },
@@ -94,15 +73,7 @@ const Box6 = () => {
         { image: image6, name: "Leviosa", description: "Stylish cafe chair", price: "Rp 2.500.000" },
         { image: image7, name: "Lolito", description: "Luxury big sofa", price: "Rp 7.000.000" },
     ];
-    // const renderProducts = () => {
-    //     if (currentPage === 1) {
-    //         return allProducts;
-    //     } else if (currentPage === 2) {
-    //         return page2Products;
-    //     } else {
-    //         return allProducts;
-    //     }
-    // };
+
     const renderProducts = () => {
         if (currentPage === 1) {
             return allProducts;
@@ -130,11 +101,23 @@ const Box6 = () => {
                         />
                         {index === 1 && hoveredProduct === index && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
-                                <button className="px-4 py-2 bg-yellow-500 rounded-md">Add to cart</button>
+                                <button className="px-4 py-2 bg-yellow-500 rounded-md " onClick={handleAddToCart} >
+ Add to cart</button>
+                                
+
                                 <div className="flex space-x-4">
-                                    <button className="px-2 py-1 bg-gray-700 rounded-md">Share</button>
-                                    <button className="px-2 py-1 bg-gray-700 rounded-md">Compare</button>
-                                    <button className="px-2 py-1 bg-gray-700 rounded-md">Like</button>
+                                    <button
+                                        className="px-2 py-1 boreder-none  text-white"
+                                        onClick={() => handleShare(product)}
+                                    >
+                                        <HiShare className="mr-2" /> Share
+                                    </button>
+                                    <button className="px-2 py-1 boreder-none  text-white ">
+                                        <HiRefresh className="mr-2" /> Compare
+                                    </button>
+                                    <button className="px-2 py-1 boreder-none  text-white">
+                                        <HiThumbUp className="mr-2" /> Like
+                                    </button>
                                 </div>
                             </div>
                         )}
@@ -144,9 +127,99 @@ const Box6 = () => {
                     </div>
                 ))}
             </div>
+            <div className="flex justify-center items-center space-x-2 mt-8">
+                {[1, 2, 3].map((pageNumber) => (
+                    <button
+                        key={pageNumber}
+                        onClick={() => handlePageChange(pageNumber)}
+                        className={`w-8 h-8 rounded-md ${currentPage === pageNumber
+                            ? 'bg-yellow-600 text-white'
+                            : 'bg-[#F9F1E7] text-gray-700 hover:bg-gray-200'
+                            }`}
+                    >
+                        {pageNumber}
+                    </button>
+                ))}
+                {currentPage < totalPages && (
+                    <button
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        className="px-3 py-2 rounded-md bg-[#F9F1E7] text-gray-700 hover:bg-gray-200"
+                    >
+                        Next
+                    </button>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default Box6;
 
 
-            {/* <div className="container mx-auto px-4 h-1/2 overflow-hidden bg-white-400 pl-40 pr-40">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const [currentPage, setCurrentPage] = useState(1);
+// const [hoveredProduct, setHoveredProduct] = useState(null);
+// const [showCartDetails, setShowCartDetails] = useState(false);
+// const [showShareDetails, setShowShareDetails] = useState(false);
+// const [selectedProduct, setSelectedProduct] = useState(null);
+// const totalPages = 3;
+
+// const handlePageChange = (pageNumber) => {
+//     setCurrentPage(pageNumber);
+// };
+
+// const handleAddToCart = (product) => {
+//     setSelectedProduct(product);
+//     setShowCartDetails(true);
+// };
+
+// const handleShare = (product) => {
+//     setSelectedProduct(product);
+//     setShowShareDetails(true);
+// };
+
+// const closeDetails = () => {
+//     setShowCartDetails(false);
+//     setShowShareDetails(false);
+//     setSelectedProduct(null);
+// };
+
+
+// const renderProducts = () => {
+//     if (currentPage === 1) {
+//         return allProducts;
+//     } else if (currentPage === 2) {
+//         return page2Products;
+//     } else {
+//         return allProducts;
+//     }
+// };
+
+
+{/* <div className="container mx-auto px-4 h-1/2 overflow-hidden bg-white-400 pl-40 pr-40">
                 <div className="grid grid-cols-4 gap-6 mt-0">
                     {renderProducts().map((product, index) => (
                         <div
@@ -191,42 +264,16 @@ const Box6 = () => {
                             <p className="text-gray-900 font-bold">{product.price}</p>
                         </div>
                     ))} */}
-                {/* </div> */}
+{/* </div> */ }
 
 
 
-                <div className="flex justify-center items-center space-x-2 mt-8">
-                    {[1, 2, 3].map((pageNumber) => (
-                        <button
-                            key={pageNumber}
-                            onClick={() => handlePageChange(pageNumber)}
-                            className={`w-8 h-8 rounded-md ${currentPage === pageNumber
-                                ? 'bg-yellow-600 text-white'
-                                : 'bg-[#F9F1E7] text-gray-700 hover:bg-gray-200'
-                                }`}
-                        >
-                            {pageNumber}
-                        </button>
-                    ))}
-                    {currentPage < totalPages && (
-                        <button
-                            onClick={() => handlePageChange(currentPage + 1)}
-                            className="px-3 py-2 rounded-md bg-[#F9F1E7] text-gray-700 hover:bg-gray-200"
-                        >
-                            Next
-                        </button>
-                    )}
-                </div>
 
-                {/* {showCartDetails && (
+{/* {showCartDetails && (
                 <CartDetails product={selectedProduct} onClose={closeDetails} />
             )}
             {showShareDetails && (
                 <ShareDetails product={selectedProduct} onClose={closeDetails} />
             )} */}
-            </div>
-        // </div>
-    );
-};
-
-export default Box6;
+{/* </div> */ }
+// 

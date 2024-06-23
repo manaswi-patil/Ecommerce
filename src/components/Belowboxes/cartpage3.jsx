@@ -3,6 +3,7 @@ import image1 from './../../../src/assets/image 1.png';
 import image2 from './../../../src/assets/image 2.png';
 import image3 from './../../../src/assets/image 3.png';
 import image4 from './../../../src/assets/image 4.png';
+import Footer from './../../components/Belowboxes/Footer';
 const Cartpage3 = () => {
   return (
     <div className="container mx-auto px-4  h-1/2 overflow-hidden bg-white-400 pl-20 pr-20">
@@ -53,7 +54,7 @@ const Cartpage3 = () => {
 
                 </div>
                 <button className= 'text-yellow-500   font-bold border-yellow-500 border-2 px-20  py-2 mx-auto block mt-10'>Show More</button>
-
+<Footer />
             </div>
    
   )

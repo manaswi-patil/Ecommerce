@@ -46,7 +46,7 @@ const Box1 = () => {
           </div>
         </div>
       </div>
-      <Box2 />
+      {/* <Box2 /> */}
     </div>
 
   );
@@ -54,4 +54,3 @@ const Box1 = () => {
 
 export default Box1;
 
-// mt-[100vh] 

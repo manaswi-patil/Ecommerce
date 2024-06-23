@@ -1,6 +1,4 @@
-
 import React from 'react';
-import PropTypes from 'prop-types';
 import GalleryItem from './../Belowboxes/GalleryItem';
 import box1 from './../../../src/assets/Rectangle 36.png';
 import box2 from './../../../src/assets/Rectangle 43.png';
