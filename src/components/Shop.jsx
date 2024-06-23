@@ -29,7 +29,6 @@ const Shop = () => {
             {/* <Cartpage/> */}
             <div>
                 <Footer />
-                <Cartpage/>
             </div>
         </div>
     );

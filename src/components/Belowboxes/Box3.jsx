@@ -5,7 +5,7 @@ import Imagess0 from './../../../src/assets/Images0.png';
 
 const RoomInspiration = () => {
   return (
-    <div className="bg-white-200 py-10 px-10 " style={{ background: 'rgba(252, 248, 243, 1)' }}>
+    <div className="bg-white-200 mt-16 px-10 " style={{ background: 'rgba(252, 248, 243, 1)' }}>
 
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row items-center">
@@ -15,7 +15,7 @@ const RoomInspiration = () => {
             <p className="text-gray-600 mb-6">
               Our designer already made a lot of beautiful prototype of rooms that inspire you
             </p>
-            <button className="bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 transition duration-300">
+            <button className="bg-[#B88E2F] text-white px-8 py-3  hover:bg-yellow-500 transition duration-300">
               Explore More
             </button>
           </div>
@@ -26,14 +26,14 @@ const RoomInspiration = () => {
                 <img
                   src={Images0}
                   alt="Image 1"
-                  className="w-full  rounded-lg shadow-lg"
+                  className="w-full   shadow-lg"
                 />
               </div>
               <div className="flex-shrink-0 w-full md:w-1/2">
                 <img
                   src={box3img1}
                   alt="Image 2"
-                  className="w-full  rounded-lg shadow-lg"
+                  className="w-full  shadow-lg"
                 />
 
               </div>

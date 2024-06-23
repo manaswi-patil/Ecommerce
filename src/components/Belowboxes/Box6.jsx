@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiShare, HiRefresh, HiThumbUp } from 'react-icons/hi';
-
+import {useNavigate} from 'react-router-dom'
 import image1 from './../../../src/assets/image 1.png';
 import image2 from './../../../src/assets/Asgaard sofa 3.png';
 import image3 from './../../../src/assets/image 3.png';
@@ -17,10 +17,8 @@ import image13 from './../../../src/assets/image 1.png';
 import image14 from './../../../src/assets/image 2.png';
 import image15 from './../../../src/assets/image 3.png';
 import image16 from './../../../src/assets/image 4.png';
-import CartPage from './cartpage';
-
-
 const Box6 = () => {
+    const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const totalPages = 3;
@@ -29,11 +27,10 @@ const Box6 = () => {
         setCurrentPage(pageNumber);
     };
 
- 
-    // Replace the existing handleAddToCart function with this one
     const handleAddToCart = () => {
-        const cartPageUrl = './components/Belowboxes/cartpage'; // Adjust this URL to match your routing configuration
-        window.open(cartPageUrl, '_blank');
+        // const cartPageUrl = '/cartpage'; // Adjust this URL to match your routing configuration
+        // window.open(cartPageUrl, '_blank');
+        navigate('/cartpage' );
     };
 
     const allProducts = [
@@ -103,7 +100,6 @@ const Box6 = () => {
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
                                 <button className="px-4 py-2 bg-yellow-500 rounded-md " onClick={handleAddToCart} >
  Add to cart</button>
-                                
 
                                 <div className="flex space-x-4">
                                     <button

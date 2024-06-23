@@ -26,7 +26,7 @@ const Box4 = () => {
     return (
         <div className="container mx-auto   pt-20 pb-40 px-4 py-0 bg-white-200">
 
-            <h1 className="text-2xl font-bold text-center text-gray-300 mb-5">Share your setup with</h1>
+            <h1 className="text-2xl font-semibold text-center text-[#616161] mb-2">Share your setup with</h1>
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 font-Poppins-bold">#FuniroFurniture</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
