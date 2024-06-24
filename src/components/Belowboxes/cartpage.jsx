@@ -25,12 +25,18 @@ const Cartpage = () => {
       setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
+  const [selectedColor, setSelectedColor] = useState('');
+
+  // Function to handle color selection
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
   return (
     <div>
       <div className="min-h-screen bg-gray-100">
         <div className="container mx-auto ">
           <nav className="text-gray-600">
-            <ul className="flex space-x-2 bg-yellow-50 py-6 gap-4 pl-40 mt-7 ">
+            <ul className="flex space-x-2 bg-yellow-50  py-6 gap-4 pl-40 mt-20 ">
               <li>
                 <a href="#" className="hover:underline">Home</a>
               </li>
@@ -83,7 +89,7 @@ const Cartpage = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4 mb-6">
-                <div>
+                {/* <div>
                   <span className="text-gray-600">Color:</span>
                   <div className="mt-2">
                     <div className="flex space-x-2">
@@ -93,7 +99,35 @@ const Cartpage = () => {
                       <button className="w-6 h-6 bg-gray-600 rounded-full border-2 border-gray-300"></button>
                     </div>
                   </div>
-                </div>
+                </div> */}
+
+<div>
+      <span className="text-gray-600">Color:</span>
+      <div className="mt-2">
+        <div className="flex space-x-2">
+          <button
+            className={`w-6 h-6 bg-blue-600 rounded-full border-2 ${selectedColor === 'blue' ? 'border-gray-800' : 'border-gray-300'}`}
+            onClick={() => handleColorSelect('blue')}
+          ></button>
+          <button
+            className={`w-6 h-6 bg-yellow-600 rounded-full border-2 ${selectedColor === 'yellow' ? 'border-gray-800' : 'border-gray-300'}`}
+            onClick={() => handleColorSelect('yellow')}
+          ></button>
+          <button
+            className={`w-6 h-6 bg-black rounded-full border-2 ${selectedColor === 'black' ? 'border-gray-800' : 'border-gray-300'}`}
+            onClick={() => handleColorSelect('black')}
+          ></button>
+          <button
+            className={`w-6 h-6 bg-gray-600 rounded-full border-2 ${selectedColor === 'gray' ? 'border-gray-800' : 'border-gray-300'}`}
+            onClick={() => handleColorSelect('gray')}
+          ></button>
+        </div>
+      </div>
+      {selectedColor && (
+        <p className="mt-2 text-gray-600">{selectedColor}</p>
+      )}
+    </div>
+  
               </div>
 
 

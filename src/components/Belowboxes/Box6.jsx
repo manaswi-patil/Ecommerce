@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiShare, HiRefresh, HiThumbUp } from 'react-icons/hi';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import image1 from './../../../src/assets/image 1.png';
 import image2 from './../../../src/assets/Asgaard sofa 3.png';
 import image3 from './../../../src/assets/image 3.png';
@@ -30,7 +30,7 @@ const Box6 = () => {
     const handleAddToCart = () => {
         // const cartPageUrl = '/cartpage'; // Adjust this URL to match your routing configuration
         // window.open(cartPageUrl, '_blank');
-        navigate('/cartpage' );
+        navigate('/cartpage');
     };
 
     const allProducts = [
@@ -99,7 +99,7 @@ const Box6 = () => {
                         {index === 1 && hoveredProduct === index && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
                                 <button className="px-4 py-2 bg-yellow-500 rounded-md " onClick={handleAddToCart} >
- Add to cart</button>
+                                    Add to cart</button>
 
                                 <div className="flex space-x-4">
                                     <button
