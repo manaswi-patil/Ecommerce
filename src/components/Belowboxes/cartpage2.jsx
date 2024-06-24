@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import sofa1 from './../../../src/assets/sofa1.png';
 import sofa2 from './../../../src/assets/sofa2.png';
+import Cartpage3 from './../../components/Belowboxes/cartpage3';
 const Cartpage2 = () => {
   const [activeTab, setActiveTab] = useState('Description');
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="flex  justify-center">
+    <div className="container w-full mx-auto justify-between items-center ">
+      <div className="flex mt-5 font-[Poppins] font-size-[24px] justify-center">
         <button
-          className={`px-4 py-2 ${activeTab === 'Description' ? ' text-black' : 'text-gray-500'}`}
+          className={`px-4  py-2 ${activeTab === 'Description' ? ' text-black' : 'text-gray-500'}`}
           onClick={() => setActiveTab('Description')}
         >
           Description
@@ -27,9 +28,9 @@ const Cartpage2 = () => {
         </button>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 pr-72 pl-72 ">
         <p className="text-gray-600 mb-4">
-          Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the unmistakable look and
+          Embodying the raw, wayward spirit of rock  roll, the Kilburn portable active stereo speaker takes the unmistakable look and
           sound of Marshall, unplugs the chords, and takes the show on the road.
         </p>
         <p className="text-gray-600">
@@ -40,14 +41,16 @@ const Cartpage2 = () => {
         </p>
       </div>
 
-      <div className="mt-8 flex gap-4">
-        <div className="" style={{ height: 500, width: 500 }}>
+      <div className=" flex w-full justify-center gap-4">
+        <div className="flex-grow-0" style={{ height: 500, width: '550px' }}>
           <img src={sofa2}alt="Sofa side view" className="w-full bg-orange-50  rounded" />
         </div>
-        <div className="" style={{ height: 500, width: 500 }}>
+        <div className="flex-grow-0" style={{ height: 500, width: '550px' }}>
           <img src={sofa2}alt="Sofa side view" className="w-full bg-orange-50 rounded" />
         </div>
       </div>
+      {/* <Cartpage3 /> */}
+
     </div>
   );
 };

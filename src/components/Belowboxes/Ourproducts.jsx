@@ -66,7 +66,7 @@ const Box2 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-6">
                     <div className="flex flex-col  bg-gray-100 hover:scale-105 transition-transform duration-300 ease-in-out" onClick={() => handlePopup(image5)}>
                         <img
                             src={image5}

@@ -3,7 +3,7 @@ import Quality from './../../../src/assets/quality.png';
 import Warranty from './../../../src/assets/warranty.png';
 import Free from './../../../src/assets/freeshopping.png';
 import Alltime from './../../../src/assets/24.png';
-const Box5 = () => {
+const Qualitybar = () => {
   return (
     <div className=" bg-yellow-50 py-4 mt-10">
       <div className="container mx-auto  py-10 px-4">
@@ -51,4 +51,4 @@ const Box5 = () => {
   );
 };
 
-export default Box5;
+export default Qualitybar;

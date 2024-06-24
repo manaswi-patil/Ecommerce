@@ -26,10 +26,13 @@ const Box6 = () => {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+    // const handleProductClick= () => {
+        
+    //     navigate('/cartpage');
+    // };
 
     const handleAddToCart = () => {
-        // const cartPageUrl = '/cartpage'; // Adjust this URL to match your routing configuration
-        // window.open(cartPageUrl, '_blank');
+        
         navigate('/cartpage');
     };
 
@@ -95,16 +98,19 @@ const Box6 = () => {
                             src={product.image}
                             alt={`Product ${index + 1}`}
                             className="w-full h-auto rounded-lg mb-4 cursor-pointer"
+                            // onClick={() => handleProductClick(product)}
+                            onClick={handleAddToCart} 
                         />
                         {index === 1 && hoveredProduct === index && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
-                                <button className="px-4 py-2 bg-yellow-500 rounded-md " onClick={handleAddToCart} >
-                                    Add to cart</button>
+                                {/* <button className="px-4 py-2 bg-yellow-500 rounded-md "  >
+                                    Add to cart</button> */}
 
+                                    <button className="px-4 py-2 bg-yellow-500 rounded-md "  >
+                                    Add to cart</button>
                                 <div className="flex space-x-4">
                                     <button
                                         className="px-2 py-1 boreder-none  text-white"
-                                        onClick={() => handleShare(product)}
                                     >
                                         <HiShare className="mr-2" /> Share
                                     </button>

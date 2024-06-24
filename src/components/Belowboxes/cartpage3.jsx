@@ -53,7 +53,7 @@ const Cartpage3 = () => {
                     </div>
 
                 </div>
-                <button className= 'text-yellow-500   font-bold border-yellow-500 border-2 px-20  py-2 mx-auto block mt-10'>Show More</button>
+                <button className= 'text-yellow-500 hover:text-gray-400  font-bold border-yellow-500 border-2 px-20  py-2 mx-auto block mt-10 mb-20'>Show More</button>
 <Footer />
             </div>
    

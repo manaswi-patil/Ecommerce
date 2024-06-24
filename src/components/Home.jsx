@@ -1,9 +1,9 @@
 import React from 'react'
 import firstimg from './../../src/assets/firstimg.png';
-import Box1 from './Belowboxes/Box1';
-import Box2 from './Belowboxes/Box2';
-import Box3 from './Belowboxes/Box3';
-import Box4 from './Belowboxes/Box4';
+import BrowseRange from './Belowboxes/BrowseRange';
+import Ourproducts from './Belowboxes/Ourproducts';
+import Beautifulinspiration from './Belowboxes/Beautifulinspiration';
+import Funirofurniture from './Belowboxes/Funirofurniture';
 import Footer from './Belowboxes/Footer';
 const Home = () => {
     return (
@@ -20,11 +20,11 @@ const Home = () => {
 
                 </div>
             </div>
-            <Box1 />
-            <Box2 />
+            <BrowseRange />
+            <Ourproducts />
 
-            <Box3 />
-            <Box4 />
+            <Beautifulinspiration/>
+            <Funirofurniture />
             <Footer />
         </div>
 

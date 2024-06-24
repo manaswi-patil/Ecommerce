@@ -2,7 +2,7 @@ import React from 'react';
 import Breadcrumb from './Breadcrumb';
 import FilterBar from './FilterBar';
 import Shopimgbg from './../../src/assets/Rectangle 1.png';
-import Box5 from './Belowboxes/Box5';
+import Funirofurniture from './Belowboxes/Funirofurniture';
 import Box6 from './Belowboxes/Box6';
 import Footer from './Belowboxes/Footer';
 import Cartpage from './Belowboxes/cartpage';
@@ -25,7 +25,7 @@ const Shop = () => {
             <div className='mt-60'>
                 <Box6 />
             </div>
-            <Box5 />
+            <Funirofurniture />
             {/* <Cartpage/> */}
             <div>
                 <Footer />

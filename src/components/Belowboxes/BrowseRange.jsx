@@ -3,8 +3,8 @@ import React from 'react';
 import homebox1img1 from './../../assets/homebox1img1.png';
 import homebox1img2 from './../../assets/homebox1img2.png';
 import homebox1img3 from './../../assets/homebox1img3.png';
-import Box2 from './../Belowboxes/Box2';
-const Box1 = () => {
+import Box2 from './Ourproducts';
+const BrowseRange = () => {
   const [isCardOpen, setIsCardOpen] = React.useState(false);
 
   const handleCardClick = () => {
@@ -54,5 +54,5 @@ const Box1 = () => {
   );
 };
 
-export default Box1;
+export default BrowseRange;
 

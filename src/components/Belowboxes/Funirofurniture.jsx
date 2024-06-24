@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryItem from './../Belowboxes/GalleryItem';
+import GalleryItem from './GalleryItem';
 import box1 from './../../../src/assets/Rectangle 36.png';
 import box2 from './../../../src/assets/Rectangle 43.png';
 import box3 from './../../../src/assets/Rectangle 38.png';
@@ -22,7 +22,7 @@ const images = [
     { src: box9, className: 'col-span-1' },
 ];
 
-const Box4 = () => {
+const Funirofurniture = () => {
     return (
         <div className="container mx-auto   pt-20 pb-40 px-4 py-0 bg-white-200">
 
@@ -42,4 +42,4 @@ const Box4 = () => {
     );
 };
 
-export default Box4;
+export default Funirofurniture;
