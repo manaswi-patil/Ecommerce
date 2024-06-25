@@ -8,7 +8,7 @@ import image6 from './../../../src/assets/image 6.png';
 import image7 from './../../../src/assets/image 7.png';
 import image8 from './../../../src/assets/image 8.png';
 
-const Box2 = () => {
+const Ourproducts = () => {
     const handlePopup = (image) => {
         console.log(image);
     };
@@ -122,4 +122,4 @@ const Box2 = () => {
     );
 };
 
-export default Box2;
+export default Ourproducts;

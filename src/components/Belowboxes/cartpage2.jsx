@@ -1,36 +1,29 @@
 import React, { useState } from 'react';
-import sofa1 from './../../../src/assets/sofa1.png';
 import sofa2 from './../../../src/assets/sofa2.png';
-import Cartpage3 from './../../components/Belowboxes/cartpage3';
 const Cartpage2 = () => {
   const [activeTab, setActiveTab] = useState('Description');
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div className="container w-full mx-auto justify-between items-center ">
-      <div className="flex mt-5 font-[Poppins] font-size-[24px] justify-center">
-        <button
-          className={`px-4  py-2 ${activeTab === 'Description' ? ' text-black' : 'text-gray-500'}`}
-          onClick={() => setActiveTab('Description')}
-        >
+    <div className="container w-full mx-auto">
+      <div className="flex mt-5 justify-center mt-10">
+        <TabButton activeTab={activeTab} onClick={() => handleTabClick('Description')}>
           Description
-        </button>
-        <button
-          className={`px-4 py-2 ${activeTab === 'Additional Information' ? ' text-black ' : 'text-gray-500'}`}
-          onClick={() => setActiveTab('Additional Information')}
-        >
+        </TabButton>
+        <TabButton activeTab={activeTab} onClick={() => handleTabClick('Additional Information')}>
           Additional Information
-        </button>
-        <button
-          className={`px-4 py-2 ${activeTab === 'Reviews' ? ' text-black' : 'text-gray-500'}`}
-          onClick={() => setActiveTab('Reviews')}
-        >
+        </TabButton>
+        <TabButton activeTab={activeTab} onClick={() => handleTabClick('Reviews')}>
           Reviews [5]
-        </button>
+        </TabButton>
       </div>
 
-      <div className="mt-6 pr-72 pl-72 ">
+      <div className="mt-6 px-8  pl-60 pr-60">
         <p className="text-gray-600 mb-4">
-          Embodying the raw, wayward spirit of rock  roll, the Kilburn portable active stereo speaker takes the unmistakable look and
+          Embodying the raw, wayward spirit of rock roll, the Kilburn portable active stereo speaker takes the unmistakable look and
           sound of Marshall, unplugs the chords, and takes the show on the road.
         </p>
         <p className="text-gray-600">
@@ -40,17 +33,28 @@ const Cartpage2 = () => {
           to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
         </p>
       </div>
-
-      <div className=" flex w-full justify-center gap-4">
-        <div className="flex-grow-0" style={{ height: 500, width: '550px' }}>
-          <img src={sofa2}alt="Sofa side view" className="w-full bg-orange-50  rounded" />
-        </div>
-        <div className="flex-grow-0" style={{ height: 500, width: '550px' }}>
-          <img src={sofa2}alt="Sofa side view" className="w-full bg-orange-50 rounded" />
-        </div>
+      <div className="flex justify-center gap-6 mt-10">
+        <ProductImage />
+        <ProductImage />
       </div>
-      {/* <Cartpage3 /> */}
-
+    </div>
+  );
+};
+const TabButton = ({ activeTab, onClick, children }) => {
+  const isActive = activeTab === children;
+  return (
+    <button
+      className={`px-4 py-2 ${isActive ? 'text-black' : 'text-gray-500'}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
+const ProductImage = () => {
+  return (
+    <div style={{ height: 500, width: '550px' }} className="flex-shrink-0">
+      <img src={sofa2} alt="Sofa side view" className="w-full bg-orange-50 rounded" />
     </div>
   );
 };

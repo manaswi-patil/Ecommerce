@@ -5,7 +5,7 @@ import Free from './../../../src/assets/freeshopping.png';
 import Alltime from './../../../src/assets/24.png';
 const Qualitybar = () => {
   return (
-    <div className=" bg-yellow-50 py-4 mt-10">
+    <div className=" bg-[#FAF3EA] py-4 mt-10 pl-10 pr-10">
       <div className="container mx-auto  py-10 px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex items-center mb-4 sm:mb-0">

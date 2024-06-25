@@ -26,13 +26,9 @@ const Box6 = () => {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-    // const handleProductClick= () => {
-        
-    //     navigate('/cartpage');
-    // };
 
     const handleAddToCart = () => {
-        
+
         navigate('/cartpage');
     };
 
@@ -98,15 +94,11 @@ const Box6 = () => {
                             src={product.image}
                             alt={`Product ${index + 1}`}
                             className="w-full h-auto rounded-lg mb-4 cursor-pointer"
-                            // onClick={() => handleProductClick(product)}
-                            onClick={handleAddToCart} 
+                            onClick={handleAddToCart}
                         />
                         {index === 1 && hoveredProduct === index && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
-                                {/* <button className="px-4 py-2 bg-yellow-500 rounded-md "  >
-                                    Add to cart</button> */}
-
-                                    <button className="px-4 py-2 bg-yellow-500 rounded-md "  >
+                                <button className="px-4 py-2 bg-yellow-500 rounded-md "  >
                                     Add to cart</button>
                                 <div className="flex space-x-4">
                                     <button
@@ -182,100 +174,3 @@ export default Box6;
 
 
 
-// const [currentPage, setCurrentPage] = useState(1);
-// const [hoveredProduct, setHoveredProduct] = useState(null);
-// const [showCartDetails, setShowCartDetails] = useState(false);
-// const [showShareDetails, setShowShareDetails] = useState(false);
-// const [selectedProduct, setSelectedProduct] = useState(null);
-// const totalPages = 3;
-
-// const handlePageChange = (pageNumber) => {
-//     setCurrentPage(pageNumber);
-// };
-
-// const handleAddToCart = (product) => {
-//     setSelectedProduct(product);
-//     setShowCartDetails(true);
-// };
-
-// const handleShare = (product) => {
-//     setSelectedProduct(product);
-//     setShowShareDetails(true);
-// };
-
-// const closeDetails = () => {
-//     setShowCartDetails(false);
-//     setShowShareDetails(false);
-//     setSelectedProduct(null);
-// };
-
-
-// const renderProducts = () => {
-//     if (currentPage === 1) {
-//         return allProducts;
-//     } else if (currentPage === 2) {
-//         return page2Products;
-//     } else {
-//         return allProducts;
-//     }
-// };
-
-
-{/* <div className="container mx-auto px-4 h-1/2 overflow-hidden bg-white-400 pl-40 pr-40">
-                <div className="grid grid-cols-4 gap-6 mt-0">
-                    {renderProducts().map((product, index) => (
-                        <div
-                            key={index}
-                            className="relative flex flex-col items-center bg-gray-100 hover:scale-105 transition-transform duration-300 ease-in-out"
-                            onMouseEnter={() => setHoveredProduct(index)}
-                            onMouseLeave={() => setHoveredProduct(null)}
-                        >
-                            <img
-                                src={product.image}
-                                alt={`Product ${index + 1}`}
-                                className="w-full h-auto rounded-lg mb-4 cursor-pointer"
-                            />
-                            {hoveredProduct === index && (
-                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white space-y-2">
-                                    <button
-                                        className="px-4 py-2 bg-yellow-500 rounded-md"
-                                        onClick={() => handleAddToCart(product)}
-                                    >
-                                        Add to cart
-                                    </button>
-
-                                    <div className="flex space-x-4">
-                                        <button
-                                            className=" border-none  text-white rounded-md"
-                                            onClick={() => handleShare(product)}
-                                        >
-                                            <HiShare className="mr-2" /> Share
-                                        </button>
-                                        <button className=" border-none  text-white rounded-md">
-                                            <HiRefresh className="mr-2" /> Compare
-                                        </button>
-                                        <button className=" border-none text-white rounded-md">
-                                            <HiThumbUp className="mr-2" />Like
-                                        </button>
-                                    </div>
-
-                                </div>
-                            )}
-                            <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                            <p className="text-gray-500 mb-1">{product.description}</p>
-                            <p className="text-gray-900 font-bold">{product.price}</p>
-                        </div>
-                    ))} */}
-{/* </div> */ }
-
-
-
-
-{/* {showCartDetails && (
-                <CartDetails product={selectedProduct} onClose={closeDetails} />
-            )}
-            {showShareDetails && (
-                <ShareDetails product={selectedProduct} onClose={closeDetails} />
-            )} */}
-{/* </div> */ }
-// 
